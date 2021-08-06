@@ -89,26 +89,26 @@ high_quality=1 是最高1080P |
 在 markdown 中需要嵌入视频的位置使用以下形式即可：
 
 ``` python
-{{< bilibili BV1sz4y197L8 >}}
+{{</* bilibili BV1sz4y197L8 /*>}}
 ```
 
 对于有多集的视频，我想指定第 10 集，则是：
 
 ```python
-{{< bilibili BV1sz4y197L8 10 >}}
+{{</* bilibili BV1sz4y197L8 10 /*>}}
 ```
 ## 3. 嵌入 YouTube 视频
 
 Hugo 貌似支持直接使用  `YouTube`  的视频嵌入，因为在我的博客的项目工程中我没有找到相关的 html 模板。YouTube 的网站链接做的相对友好：https://www.youtube.com/watch?v=XXXXXXXXXXX ，只需要把  `v=`  后面的内容复制到  `ShortCodes`  中即可，嵌入方式如下：
 
 ```python
-{{< youtube WNeLUngb-Xg >}}
+{{</* youtube WNeLUngb-Xg /*>}}
 ```
 
 如果你想要自动播放，可以将其参数设置为  `true`  实现。由于我们不能将命名和未命名的参数混在一起使用，因此需要将尚未命名的视频 ID 分配给参数  `id`  ：
 
 ```python
-{{< youtube id="w7Ft2ymGmfc" autoplay="true" >}}
+{{< /*youtube id="w7Ft2ymGmfc" autoplay="true" /*>}}
 ```
 ---
 ‍如果你的网站中无法直接嵌入  `YouTube`  的视频，那么如法炮制，在  `/layouts/shortcodes/`  目录下创建一个  `youbube.html`  并粘贴下面的代码：
