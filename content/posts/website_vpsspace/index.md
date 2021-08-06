@@ -1,11 +1,10 @@
-
 ---
 title: "搭建网页记录"
 date: 2021-05-29T00:00:20+08:00
 draft: false
 description: "从无到有，搭建网页记录"
 tags: ["vps", "hugo"]
-categories: ["study"]
+categories: ["buildwebsite"]
 ---
 <!--more-->
 # 搭建个人页记录

@@ -5,7 +5,7 @@ lastmod: 2021-07-21T22:33:32+08:00
 draft: false
 description: "google搜索技巧的一些记录"
 tags: ["google", "search"]
-categories: ["study"]
+categories: ["tools"]
 resources:
 - name: "featured-image"
   src: "featured-image.gif"

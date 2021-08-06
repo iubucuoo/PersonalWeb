@@ -4,7 +4,7 @@ date: 2021-07-22T20:38:14+08:00
 draft: false
 description: "将域名与ip捆绑"
 tags: ["DNS", "Vps"]
-categories: ["study"]
+categories: ["buildwebsite"]
 ---
 <!--more-->
 
