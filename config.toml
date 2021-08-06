@@ -19,7 +19,7 @@ theme="LoveIt"
     pre = ""
     # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
     post = ""
-    name = "文章"
+    name = "所有文章"
     url = "/posts/"
     # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
     title = "所有文章"
@@ -49,15 +49,15 @@ theme="LoveIt"
     # LoveIt 新增 | 0.2.0 页面头部导航栏标题配置
     [params.header.title]
       # LOGO 的 URL
-      logo = "/favicon.ico"#"/images/Baby-Blue.jpg"
+      logo = ""#"/favicon.ico""/images/Baby-Blue.jpg"
       # 标题名称
-      name = "good good study, day day up"
+      name = '我命由我-不由天'#"good good study, day day up"
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = ""
+      pre = "<"
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-      post = ""
+      post = ">"
       # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
-      typeit = false
+      typeit = true
 # 主页配置
   [params.home]
     # LoveIt 新增 | 0.2.0 RSS 文章数目
@@ -178,7 +178,7 @@ theme="LoveIt"
   [params.footer]
     enable = true
     # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
-    custom = '点赞投币+关注'
+    custom = '我命由我-不由天'
     # LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息
     hugo = false
     # LoveIt 新增 | 0.2.0 是否显示版权信息
