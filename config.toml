@@ -191,7 +191,18 @@ theme="LoveIt"
     icp = ""
     # 许可协议信息 (支持 HTML 格式)<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
     license = ''
-[params.page.comment]
+  [params.page]
+    [params.page.toc]
+      # whether to enable the table of the contents
+      # 是否使用目录
+      enable = true
+      # whether to keep the static table of the contents in front of the post
+      # 是否保持使用文章前面的静态目录
+      keepStatic = false
+      # whether to make the table of the contents in the sidebar automatically collapsed
+      # 是否使侧边目录自动折叠展开
+      auto = true
+    [params.page.comment]
       enable = true
       # Disqus 评论系统设置
       [params.page.comment.disqus]
