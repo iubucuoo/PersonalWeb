@@ -1,6 +1,7 @@
 baseURL = "http://www.iubucuoo.com"
 defaultContentLanguage = "zh-cn"
 languageCode = "zh-CN"
+hasCJKLanguage = true
 title = "iubucuoo"
 #params.header里设置
 theme="LoveIt" 
@@ -11,7 +12,6 @@ theme="LoveIt"
   version = "0.2.X"
   #images = ["static/logo.jpg"]
   #description="description"
-  hasCJKLanguage = true
   [menu]
   [[menu.main]]
     identifier = "posts"
@@ -51,7 +51,7 @@ theme="LoveIt"
       # LOGO 的 URL
       logo = ""#"/favicon.ico""/images/Baby-Blue.jpg"
       # 标题名称
-      name = '我命由我-不由天'#"good good study, day day up"
+      name = '晨曦的光 风干最后一行忧伤'#"good good study, day day up"
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = "<"
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
@@ -72,7 +72,7 @@ theme="LoveIt"
       # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
       title = "哎呦，不错哦"
       # 主页显示的网站副标题
-      subtitle = "他只唱，只想，这首止战之殇。"
+      subtitle = "荣耀的背后刻着一道孤独"
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
@@ -178,7 +178,7 @@ theme="LoveIt"
   [params.footer]
     enable = true
     # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
-    custom = '我命由我-不由天'
+    custom = '黑色的墨 染上安详'
     # LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息
     hugo = false
     # LoveIt 新增 | 0.2.0 是否显示版权信息
