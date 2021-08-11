@@ -7,6 +7,7 @@ tags: ["StringBuilder", "unity","GC"]
 categories: ["unity"]
 ---
 <!--more-->
+
 {{< admonition tip "Unity3D优化_字符串拼接0GC" false >}}
 {{< /admonition >}}
 # Unity3D优化_字符串拼接0GC
@@ -137,9 +138,9 @@ public StringBuilder(int capacity, int maxCapacity)
 ## 如何优化
 1. 例：
 
-    ``` Markdown
-		int a =100;
-		string b = a+"";
+    ``` 
+	int a =100;
+	string b = a+"";
     ```
     `a+""`会产生一次装箱操作，应该改成`a.ToString();`
 
@@ -148,6 +149,7 @@ public StringBuilder(int capacity, int maxCapacity)
 4. 如果可以提前确定字符串的长度，可以提前声明一个固定长度的StringBuilder，通过反射取出来内部的_str，这样就可以避免最后的ToString产生的堆内存了。由于_str内容可能无法擦掉之前的所以需要调用GarbageFreeClear();方法。
 
 ## 使用 StringBuilder 时避免垃圾
+[StringBuilderExtFormat.zip](StringBuilderExtFormat.zip)
 
 无GC代码示例：
 ```Markdown
