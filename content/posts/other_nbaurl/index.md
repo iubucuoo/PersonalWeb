@@ -7,8 +7,6 @@ categories: ["other"]
 ---
 <!--more-->
 
-{{< bilibili BV1NM4y1g71r >}}
-
 ## NBA/五大联赛免费看球链接：
 1. JRS直播吧：{{< link "jrszhibo2018.com" >}}
 2. 低调看直播：{{< link didiaokan2018.com >}}
@@ -22,4 +20,19 @@ categories: ["other"]
 10. 24直播吧：{{< link 24zhiboba.com >}}
 11. 360直播网：{{< link 360zhibo.com >}}
 12. 433足球网：{{< link 433zuqiu.com >}}
+
+
+{{< music url="/music/jaychoucpns.flac" name=超跑女神 artist=周杰伦 cover="/images/jintanhao.jpg" >}}
+
+```markdown
+{{</* music url="/music/xxx.flac" name=xxx artist=xxx cover="/images/xxx.jpg" */>}}
+```
+
+{{< bilibili BV1Sx411T7QQ >}}
+
+```markdown
+{{</* bilibili xxx */>}}
+```
+
+
 
