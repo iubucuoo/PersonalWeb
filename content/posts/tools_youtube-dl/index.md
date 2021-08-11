@@ -79,6 +79,53 @@ pip install youtube-dl
 	如：youtube-dl -o '\999\' 'www.google.com'
     ```
 
+## youtube-dl配置
+
+您可以通过将任何受支持的命令行选项放入配置文件来配置 youtube-dl。在 Linux 和 macOS 上，系统范围的配置文件位于 ，`/etc/youtube-dl.conf`用户范围的配置文件位于`~/.config/youtube-dl/config`. 在 Windows 上，用户范围的配置文件位置是`%APPDATA%\youtube-dl\config.txt`或`C:\Users\<user name>\youtube-dl.conf`。请注意，默认配置文件可能不存在，因此您可能需要自己创建它。
+
+例如，使用以下配置文件 youtube-dl 将始终提取音频，而不是复制 mtime，使用代理并将所有视频保存`Movies`在您的主目录中的目录下：
+```markdown
+# Lines starting with # are comments
+
+# Always extract audio
+-x
+
+# Do not copy the mtime
+--no-mtime
+
+# Use this proxy
+--proxy 127.0.0.1:3128
+
+# Save all videos under Movies directory in your home directory
+-o ~/YoutubeDlMovies/%(title)s.%(ext)s
+
+```
+下载视频的格式配置示例：
+
+在 Windows 上，您可能需要使用双引号而不是单引号。
+```markdown
+#下载可用的最佳 mp4 格式或任何其他最佳格式（如果没有可用的 mp4）
+#-f ' bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best '
+
+#下载最好的格式，但不超过 480p
+#-f ' bestvideo[height<=480]+bestaudio/best[height<=480] '
+
+#下载最佳视频格式但不超过 50 MB
+#-f ' best[filesize<50M] '
+
+#通过直接链接通过 HTTP/HTTPS 协议下载可用的最佳格式
+#-f ' (bestvideo+bestaudio/best)[protocol^=http] '
+
+#下载最好的视频格式和最好的音频格式而不合并它们
+#-f ' bestvideo,bestaudio ' -o ' %(title)sf%(format_id)s.%(ext)s '
+```
+请注意，配置文件中的选项与常规命令行调用中使用的选项即开关相同，因此 `-` 或  `--` 后不得有空格，例如 `-o` 或 `--proxy` 不是 `- o` 或 `-- proxy`.
+
+`--ignore-config`如果要禁用特定 youtube-dl 运行的配置文件，则可以使用。
+
+`--config-location`如果要为特定的 youtube-dl 运行使用自定义配置文件，也可以使用。
+
+
 ## youtube-dl更新
 ```
 pip install --upgrade youtube-dl
