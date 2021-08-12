@@ -5,7 +5,12 @@ hasCJKLanguage = true
 title = "iubucuoo"
 #params.header里设置
 theme="LoveIt" 
-
+# 是否使用 emoji 代码
+enableEmoji = true
+# 是否使用 git 信息
+#enableGitInfo = true
+# 是否使用 robots.txt
+#enableRobotsTXT = true
 
 [params]
   # LoveIt 主题版本
@@ -15,8 +20,8 @@ theme="LoveIt"
   [menu]
   [[menu.main]]
     identifier = "posts"
-    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-    pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标 https://fontawesome.cc/
+    pre = "<i class='fas fa-dove fa-fw'></i>"
     # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
     post = ""
     name = "所有文章"
