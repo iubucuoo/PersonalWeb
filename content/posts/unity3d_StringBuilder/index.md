@@ -74,6 +74,9 @@ StringBuilder 允许您使用可变字符串。它提供将其他字符串和其
 
 ## ToString()
 调用 ToString() 会产生垃圾吗？
+
+以下是源码：
+
 ```Markdown
 public override String ToString() {
     String currentString =  m_StringValue;
@@ -574,4 +577,4 @@ public static class StrExt
 
 
 
-参开文章[StringBuilder and String Garbage](https://www.gavpugh.com/xnac-articles/)
+参考文章[StringBuilder and String Garbage](https://www.gavpugh.com/xnac-articles/)
