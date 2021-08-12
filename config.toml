@@ -21,7 +21,7 @@ enableEmoji = true
   [[menu.main]]
     identifier = "posts"
     # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标 https://fontawesome.cc/
-    pre = "<i class='fas fa-dove fa-fw'></i>"
+    pre = ""
     # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
     post = ""
     name = "所有文章"
@@ -56,9 +56,9 @@ enableEmoji = true
       # LOGO 的 URL
       logo = ""#"/favicon.ico""/images/Baby-Blue.jpg"
       # 标题名称
-      name = 'Valar Morghulis,Valar Dohaeris'
-      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = ""
+      name = 'Valar Morghulis Valar Dohaeris'
+      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标https://fontawesome.cc/
+      pre = "<i class='fas fa-dove fa-fw'></i>"
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
       # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
