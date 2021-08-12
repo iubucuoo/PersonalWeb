@@ -98,22 +98,38 @@ categories: ["buildwebsite"]
 
 1. 将前面生成的public目录初始化为git仓库，commit提交，再push到vps上就可以了
 	```
-	cd public     git init     git add --all
+	cd public     
+	git init     
+	git add --all
 	git commit -m "Initial blog repo"
-	git remote add origin your_user@IPAddress:/blog
-	git remote set-url origin ssh://your_user@VPS_IP:/blog # 若VPS的ssh默认端口不是22，需另设置ssh端口。
+	git remote add origin ssh://your_user@VPS_IP:/blog  #当前的工作目录下设置远程仓库的地址
+	git remote set-url origin ssh://your_user@VPS_IP:/blog # 若VPS的ssh默认端口不是22，需另设置ssh端口。  #直接修改工作目录下远程仓库的地址(添加过可以不用再修改)
 	git push origin master
 	 ```	
 2. 之后会提示输入密码，输入的时候不会显示直接输入就行。
 3. push之后就可以通过域名访问到新编辑的网站了
 
-## 更新内容
+## 上传更新的内容
 1. 之后每次编辑完内容，按着之前的方式生成静态网页public，进入public
 	```
 	git add --all 添加所有修改
 	git commit -m "xxxxxxxxx" 提交修改
 	git push origin master
 	  ```
+## 如何拉取内容到本地
+```
+cd public # 进入现有的本地目录
+git clone ssh://your_user@VPS_IP:/blog# 第一次使用要把远程仓库的内容克隆到本地
+
+#下拉
+git fetch orgin master # 将远程仓库的 master 分支下载到本地当前 branch 中
+git merge origin/master # 进行合并
+
+# 上传
+git add -all # 把所有变化加入缓存区
+git commit -m "xxxxxxxxx" # 提交到本地仓库
+git push origin master # 推送到远程仓库 origin 的 master 分支
+```
 ## 结束
 1. 待后续优化 添加钥避免每次输入密码
 
