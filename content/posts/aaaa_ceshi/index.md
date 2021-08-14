@@ -12,17 +12,34 @@ resources:
 <!--more-->
 ## 添加音乐
 {{< music url="/music/jaychoucpns.flac" name=超跑女神 artist=周杰伦 cover="/images/jintanhao.jpg" >}}
-
+<!---
 ```markdown
 {{</* music url="/music/xxx.flac" name=xxx artist=xxx cover="/images/xxx.jpg" */>}}
 ```
+--->
+-------------------------
+### 美国Billboard榜
+<!--美国Billboard榜-->
+<!--{{< music auto="https://music.163.com/#/playlist?id=60198" >}}-->
+{{< music auto="https://music.163.com/#/playlist?id=60198" list-folded=true >}}
 
+---------------------------------
+### 周杰伦快歌
+<!--周杰伦快歌-->
+{{< music auto="https://music.163.com/#/playlist?id=5332707927" list-folded=true >}}
 
+-------------------------
+### 周杰伦所有的歌
+<!--周杰伦所有的歌-->
+{{< music auto="https://music.163.com/#/playlist?id=402353632" list-folded=true >}}
 
+------------------------------------------
+<!--测试本地视频-->
 <video id="video" controls="" preload="none" poster="featured-image.jpg">
       <source id="mp4" src="economicprinciples.mp4" type="video/mp4">
 </video>
 
+-------------------
 
 <!--
 0
@@ -58,7 +75,8 @@ resources:
 ## 添加bilibili视频
 
 {{< bilibili BV1NM4y1g71r >}}
-
+<!---
 ```markdown
 {{</* bilibili xxx */>}}
 ```
+--->
