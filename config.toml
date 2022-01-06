@@ -17,6 +17,15 @@ enableEmoji = true
   version = "0.2.X"
   #images = ["static/logo.jpg"]
   #description="description"
+  DPlayer = true
+  # CSS 和 JS 文件的 CDN 设置
+  [params.cdn]
+    # HLS@0.13.2 flv.js@1.5.0 DPlayer@1.25.0 https://github.com/video-dev/hls.js https://github.com/bilibili/flv.js https://github.com/MoePlayer/DPlayer
+    hlsJS = '<script src="https://cdn.jsdelivr.net/npm/hls.js@0.13.2/dist/hls.min.js"></script>'
+    flvJS = '<script src="https://cdn.jsdelivr.net/npm/flv.js@1.5.0/dist/flv.min.js"></script>'
+    dplayerCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.css">'
+    dplayerJS = '<script src="https://cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.js"></script>'
+
   [menu]
   [[menu.main]]
     identifier = "posts"
