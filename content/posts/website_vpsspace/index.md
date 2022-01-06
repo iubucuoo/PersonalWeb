@@ -32,18 +32,20 @@ resources:
 	 mkdir / blog#目录1，用作git上传的仓库目录，之后会用到
 	 mkdir / tmp/blog#目录2，用作git clone的目录，之后会用到
 	 mkdir / usr/share/nginx/html	 #目录3，用作nginx的webserver根目录，如果默认已经创建则忽略
-		```
+	 ```
  2.  安装nginx        
 		```
 	   yum update
 	   yum install nginx
 	    ```
 	   此时在本地浏览器访问域名就可以看到nginx的欢迎页面    
- 3. 配置Nginx 
-	.conf文件位置通过命令 nginx -t查看 vim编辑.conf文件
+ 3. 配置Nginx.conf文件位置通过命令 nginx -t查看 
+		
+	vim编辑.conf文件       
 		```
 		vim /usr/local/nginx/conf/nginx.conf
 		```
+	
 	在http{}节点中增加（或修改）
 	```
 	server {	#服务器
@@ -67,14 +69,15 @@ resources:
 3.  在vps上，进入之前创建的第一个目录     
 	```
 	cd /blog     
-	git init --bare 
+	git init --bare  
 	```
 ## 建一个git hook
-1. 进入远程仓库的hooks目录进行操作： 
-	```
-	cd /blog/hooks
-	vim post-receive
-	  ```
+1. 进入远程仓库的hooks目录进行操作：                 
+	 ```
+	 cd /blog/hooks
+	 vim post-receive
+	 ```
+
 2.  将以下内容写入**post-recevie**文件 
 	**注:** 这段代码，会将本地每次push到vps上git仓库的内容，放到Nginx webserver目录（目录3）
 	```
@@ -86,10 +89,10 @@ resources:
 	rm -rf ${NGINX_HTML}/*
 	cp -rf ${TMP_GIT_CLONE}/* ${NGINX_HTML}
 	```
-3. 保存并退出，然后修改文件的权限 
+3. 保存并退出，然后修改文件的权限   
 	```
 	chmod 755 post-receive
-	  ```
+	```
 ## 编辑网页内容
 - 这里我用到的是[hugo](https://gohugo.io/)
 1. 在本地下载好hugo可执行文件
@@ -105,8 +108,10 @@ resources:
 	git init     
 	git add --all
 	git commit -m "Initial blog repo"
-	git remote add origin ssh://your_user@VPS_IP:/blog  #当前的工作目录下设置远程仓库的地址
-	git remote set-url origin ssh://your_user@VPS_IP:/blog # 若VPS的ssh默认端口不是22，需另设置ssh端口。  #直接修改工作目录下远程仓库的地址(添加过可以不用再修改)
+	#当前的工作目录下设置远程仓库的地址
+	git remote add origin ssh://your_user@VPS_IP:/blog  
+	#直接修改工作目录下远程仓库的地址(添加过可以不用再修改)
+	git remote set-url origin ssh://your_user@VPS_IP:/blog # 若VPS的ssh默认端口不是22，需另设置ssh端口。  
 	git push origin master
 	 ```	
 2. 之后会提示输入密码，输入的时候不会显示直接输入就行。
