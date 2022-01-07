@@ -18,7 +18,7 @@ resources:
 ```
 --->
 ## 添加本地视频
-{{< video id="a" url="/music/testvideo.mp4" >}}
+{{< video id="a" url="economicprinciples.mp4" >}}
 <!---
 ```markdown
 {{< video id="a" url="/videos/testvideo.mp4" sub="" >}}
@@ -42,9 +42,9 @@ resources:
 
 ------------------------------------------
 <!--测试本地视频-->
-<video id="video" controls="" preload="none" poster="featured-image.jpg">
+<!--<video id="video" controls="" preload="none" poster="featured-image.jpg">
       <source id="mp4" src="economicprinciples.mp4" type="video/mp4">
-</video>
+</video>-->
 
 -------------------
 
