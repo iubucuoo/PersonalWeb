@@ -18,12 +18,15 @@ resources:
 ```
 --->
 ## 添加本地视频
+
+{{< video id="a" url="/music/testvideo.mp4" >}}
+
 {{< video id="a" url="economicprinciples.mp4" >}}
-<!---
+
 ```markdown
-{{< video id="a" url="/videos/testvideo.mp4" sub="" >}}
+{{</* video id="a" url="/music/testvideo.mp4" */>}}
 ```
---->
+
 -------------------------
 ### 美国Billboard榜
 <!--美国Billboard榜-->
@@ -82,8 +85,8 @@ resources:
 ## 添加bilibili视频
 
 {{< bilibili BV1NM4y1g71r >}}
-<!---
+
 ```markdown
 {{</* bilibili xxx */>}}
 ```
---->
+

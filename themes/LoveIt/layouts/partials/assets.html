@@ -209,22 +209,22 @@
 {{- if ne .Site.Params.DPlayer false -}}
     {{- if (.Scratch.Get "this").video -}}
         {{- /* DPlayer */ -}}
-        {{- with $cdn.dplayerCSS -}}
+        {{- with (.Scratch.Get "this").cdn.dplayerCSS -}}
             {{- slice . | (.Scratch.Add "this").linkCDN -}}
         {{- else -}}
             {{- slice "lib/dplayer/DPlayer.min.css" | (.Scratch.Add "this").linkLocal -}}
         {{- end -}}
-        {{- with $cdn.hlsJS -}}
+        {{- with (.Scratch.Get "this").cdn.hlsJS -}}
         {{- slice . | (.Scratch.Add "this").scriptCDN -}}
         {{- else -}}
             {{- slice "lib/dplayer/hls.min.js" | (.Scratch.Add "this").scriptLocal -}}
         {{- end -}}
-        {{- with $cdn.flvJS -}}
+        {{- with (.Scratch.Get "this").cdn.flvJS -}}
         {{- slice . | (.Scratch.Add "this").scriptCDN -}}
         {{- else -}}
             {{- slice "lib/dplayer/flv.min.js" | (.Scratch.Add "this").scriptLocal -}}
         {{- end -}}
-        {{- with $cdn.dplayerJS -}}
+        {{- with (.Scratch.Get "this").cdn.dplayerJS -}}
             {{- slice . | (.Scratch.Add "this").scriptCDN -}}
         {{- else -}}
             {{- slice "lib/dplayer/DPlayer.min.js" | (.Scratch.Add "this").scriptLocal -}}
